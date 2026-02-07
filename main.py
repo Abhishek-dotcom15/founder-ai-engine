@@ -1,3 +1,5 @@
+from email_sender import send_email
+
 from rss_fetcher import get_news
 from analyst import pick_best_article
 from strategist import deep_analysis
@@ -24,6 +26,8 @@ def run_founder_engine():
 
     print("\n\n========= FOUNDER POST =========\n")
     print(post)
+    send_email(post)
+
     print("\n================================\n")
 
 

@@ -24,6 +24,10 @@ jobs:
 
       - name: Run Founder Engine
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          COMPANY_NAME: "Brillinity"
+          env:
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  COMPANY_NAME: "Brillinity"
+  EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+  EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+
         run: python main.py
