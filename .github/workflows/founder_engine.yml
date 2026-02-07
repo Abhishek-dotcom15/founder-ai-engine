@@ -1,0 +1,29 @@
+name: Founder AI Engine
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # Runs daily (9:30 AM India time)
+  workflow_dispatch:      # Allows manual run
+
+jobs:
+  run-engine:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install google-genai feedparser python-dotenv
+
+      - name: Run Founder Engine
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          COMPANY_NAME: "Brillinity"
+        run: python main.py
