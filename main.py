@@ -8,7 +8,6 @@ from founder_writer import write_founder_post
 from linkedin_oneclick import create_linkedin_post_url
 from category_topic_engine import get_today_topic
 
-
 import random
 
 
@@ -16,6 +15,9 @@ def run_founder_engine():
 
     print("🚀 Starting Founder Engine...\n")
 
+    # Smart distribution:
+    # 60% market intelligence
+    # 40% category authority
     use_news = random.random() < 0.6
 
     if use_news:
@@ -32,9 +34,6 @@ def run_founder_engine():
         print("🎯 Forming executive belief...")
         pov = generate_pov(analysis)
 
-        # ✅ FIX — make system tolerant
-        topic = str(best_article)
-
     else:
 
         print("🧭 Running Category Brain...")
@@ -50,19 +49,17 @@ def run_founder_engine():
     print("✍️ Writing founder post...")
     post = write_founder_post(analysis, pov)
 
-    
-
-    post_with_image = f"{post}\n\n(Visual concept below)\n{image_url}"
-
-    linkedin_url = create_linkedin_post_url(post_with_image)
+    # ✅ CLEAN — NO IMAGE CODE
+    linkedin_url = create_linkedin_post_url(post)
 
     print("\n✅ ONE-CLICK LINKEDIN POST:")
     print(linkedin_url)
 
     print("\n\n========= FOUNDER POST =========\n")
-    print(post_with_image)
+    print(post)
 
-    send_email(post_with_image)
+    # Safety fallback
+    send_email(post)
 
     print("\n================================\n")
 
