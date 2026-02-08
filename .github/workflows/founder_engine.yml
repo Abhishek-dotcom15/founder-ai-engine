@@ -23,7 +23,7 @@ jobs:
           pip install google-genai feedparser python-dotenv
 
       - name: Run Founder Engine
-        env:
+        
           env:
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
   COMPANY_NAME: "Brillinity"
