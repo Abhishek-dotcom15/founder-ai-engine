@@ -1,3 +1,16 @@
+from gemini_client import client
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+COMPANY = os.getenv("COMPANY_NAME")
+
+# Load founder style memory
+with open("founder_style.txt", "r", encoding="utf-8") as file:
+    FOUNDER_STYLE = file.read()
+
+
 def write_founder_post(analysis, pov):
 
     prompt = f"""
@@ -21,41 +34,27 @@ Strategic context:
 
 -----------------------------------
 
-Now write a LinkedIn post expressing this belief naturally.
+Write a HIGH-IMPACT LinkedIn post expressing this belief.
 
-Do NOT perform.
-Do NOT try to sound impressive.
+STRICT RULES:
 
-Just communicate like a real founder would.
+- Maximum 220 words
+- Short paragraphs (1–2 lines)
+- No markdown
+- No asterisks
+- No hashtags inside sentences
+- No emojis
+- Avoid corporate buzzwords
+- Sound like a sharp, experienced founder
+- Be opinionated but not dramatic
+- Make it feel written, not generated
+- End with a thoughtful question to drive engagement
 
-Follow natural structure:
-
-• Future-focused hook  
-• What happened  
-• Business implications  
-• What companies are missing  
-• Soft authority mention of {COMPANY}  
-• Thoughtful closing question  
-
------------------------------------
-
-HUMAN WRITING RULES:
-
-- Sound written, not generated.
-- Slight imperfection is GOOD.
-- Avoid polished AI rhythm.
-- Vary sentence flow.
-- Use occasional sharp one-liners.
-- No emojis.
-- No hashtags.
-- No motivational tone.
-- No corporate fluff.
+Do NOT sound like AI.
+Do NOT sound motivational.
+Do NOT over-explain.
 
 Protect the founder’s reputation for being right about the future.
-
-Have conviction.
-
-Max 220 words.
 """
 
     response = client.models.generate_content(
@@ -65,9 +64,10 @@ Max 220 words.
 
     post = response.text
 
-    # Remove markdown formatting
+    # Clean markdown formatting just in case the model ignores instructions
     post = post.replace("*", "")
     post = post.replace("#", "")
     post = post.replace("```", "")
+    post = post.strip()
 
     return post
