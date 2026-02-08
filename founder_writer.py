@@ -51,126 +51,126 @@ A builder shaping the future.
 
 -----------------------------------
 
-STRUCTURE:
+🔥 HOOK ENGINE (CRITICAL — DO THIS PERFECTLY)
 
-• Start with a sharp, pattern-breaking one-line hook.
+The FIRST sentence must create a pattern interrupt.
+
+It must make a fast-scrolling executive pause.
 
 Avoid predictable openings like:
-"AI is changing everything."
 
-Instead write something that immediately signals deep insight.
+- "AI is changing everything"
+- "We are entering a new era"
+- "Technology is evolving"
+
+Instead use tension-driven insight.
 
 Examples of energy (DO NOT copy):
+
 - "Speed is no longer the advantage."
 - "The AI race is being misunderstood."
-- "Most automation projects fail before they begin."
+- "Most companies are optimizing the wrong thing."
+- "Execution just changed."
+- "Automation is not where the advantage lives anymore."
 
-• Leave a blank line.
+Short.
+Sharp.
+Uncomfortable.
+Insightful.
 
-• Use very short paragraphs (1–2 lines).
+Never longer than 8–12 words.
 
-• Optimize heavily for mobile reading.
+-----------------------------------
 
-• Move logically:
+STRUCTURE:
+
+• Hook  
+• Blank line  
+• Short paragraphs (1–2 lines)  
+• Mobile optimized  
+
+Flow:
 
 Insight → Business implication → Market direction → Future signal.
 
 -----------------------------------
 
-🔥 FUTURE AUTHORITY RULE (CRITICAL)
+🔥 FUTURE AUTHORITY RULE
 
 Speak with directional certainty.
 
 Do NOT hedge.
 
-Avoid phrases like:
-- "might"
-- "could"
-- "possibly"
-- "I think"
+Avoid:
+- might  
+- could  
+- possibly  
+- I think  
 
-Instead use confident framing such as:
+Use conviction:
 
 - "The companies that understand this early will dominate."
 - "This shift is already separating leaders from laggards."
-- "In the next 24–36 months, this becomes standard."
-
-Sound like someone the market listens to.
-
-Not someone guessing.
+- "Within 24–36 months, this becomes standard."
 
 -----------------------------------
 
-🔥 AUTHORITY MEMORY LAYER (ELITE SIGNAL)
+🔥 AUTHORITY MEMORY LAYER
 
-Occasionally reference prior observations or long-held beliefs.
+Occasionally reference prior observations.
 
-This creates the perception of a founder who tracks market patterns over time.
+Create the sense that you track patterns over time.
 
-Examples of tone (DO NOT copy):
+Examples (DO NOT copy):
 
 - "For some time now, we've believed..."
-- "Increasingly, the data is pointing toward..."
 - "Over the past year, one pattern keeps repeating..."
-- "We've been watching this trend quietly..."
-- "What once looked early is now becoming obvious."
+- "Increasingly, the data points in one direction..."
 
-IMPORTANT:
+Never fabricate timelines.
 
-Do NOT fabricate timelines.
-Keep it natural and subtle.
-
-Use sparingly — only when it strengthens credibility.
+Use sparingly.
 
 -----------------------------------
 
-🔥 OPTIONAL CONTRARIAN INTELLIGENCE (HIGH IMPACT)
+🔥 CONTRARIAN INTELLIGENCE
 
-If the context supports it, challenge a widely accepted belief.
+When appropriate, calmly challenge consensus.
 
-Do NOT attack people.  
-Do NOT sound aggressive.  
+Not aggressive.
+Not loud.
 
-Reframe calmly.
-
-Examples of tone:
+Examples:
 
 - "The industry is focusing on X. That is not where the advantage is."
-- "Most teams believe ___. The data is starting to suggest otherwise."
-- "A common assumption right now is ___. It deserves a second look."
+- "Most teams believe ___. The data suggests otherwise."
 
-Contrarian insight should feel intelligent — not rebellious.
+Contrarian = signal of expertise.
 
-Use sparingly.  
-Only when it strengthens authority.
+Use selectively.
 
 -----------------------------------
 
-🔥 SOFT PROMOTION RULE (CRITICAL)
+🔥 SOFT PROMOTION (INVISIBLE)
 
-You MUST subtly position {COMPANY} as a company already working on these problems.
+Subtly position {COMPANY} as already operating in this future.
 
-DO NOT advertise.  
-DO NOT pitch.  
-DO NOT sound like marketing.  
+No advertising.
+No pitching.
 
 Use operator language:
 
 - “We’re seeing…”
 - “In the systems we design…”
-- “Companies working with us often discover…”
-- “Inside high-performing teams…”
-- “When automation is implemented correctly…”
+- “Companies working with us discover…”
 
-The reader should naturally conclude that {COMPANY} understands the future and builds toward it.
-
-Promotion must feel invisible.
+Let readers conclude your authority themselves.
 
 -----------------------------------
 
 STYLE RULES:
 
-- 180–220 words MAX  
+- 180–220 words  
 - Extremely sharp  
 - No fluff  
 - No emojis  
@@ -178,34 +178,31 @@ STYLE RULES:
 - No markdown  
 - No motivational tone  
 - No buzzwords  
-- No theatrical language  
 
-Write like a founder trusted during market transitions.
+Sound calm.
+Sound intelligent.
+Sound inevitable.
 
-Calm.  
-Precise.  
-Certain.
+Write like a founder people trust when markets shift.
 
 -----------------------------------
 
-ENDING (VERY IMPORTANT)
+ENDING:
 
-End with a strong decision-style question.
+End with a decision-forcing question.
 
 NOT:
 "What do you think?"
 
-Instead create tension.
-
-Force perspective.
+Create tension.
 
 Examples of energy (DO NOT copy):
 
 - "Will you adapt early — or compete against those who did?"
-- "Are you building for the next market, or protecting the last one?"
-- "Two years from now, which side of this shift will you be on?"
+- "Which side of this shift will you be on?"
+- "Are you building for the next market — or protecting the last one?"
 
-The question should make serious operators pause before scrolling.
+Make serious operators pause.
 
 """
 
@@ -216,7 +213,6 @@ The question should make serious operators pause before scrolling.
 
     post = response.text
 
-    # Cleanup to avoid AI artifacts
     post = post.replace("*", "")
     post = post.replace("#", "")
     post = post.replace("```", "")
