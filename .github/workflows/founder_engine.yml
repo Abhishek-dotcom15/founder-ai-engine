@@ -2,14 +2,15 @@ name: Founder AI Engine
 
 on:
   schedule:
-    - cron: '0 4 * * *'   # Runs daily (9:30 AM India time)
-  workflow_dispatch:      # Allows manual run
+    - cron: '0 4 * * *'   # 9:30 AM India
+  workflow_dispatch:
 
 jobs:
   run-engine:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -23,11 +24,10 @@ jobs:
           pip install google-genai feedparser python-dotenv
 
       - name: Run Founder Engine
-        
-          env:
-  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-  COMPANY_NAME: "Brillinity"
-  EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-  EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          COMPANY_NAME: "Brillinity"
+          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
 
         run: python main.py
