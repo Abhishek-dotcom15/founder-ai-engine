@@ -1,3 +1,16 @@
+from gemini_client import client
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+COMPANY = os.getenv("COMPANY_NAME")
+
+# Load founder style memory
+with open("founder_style.txt", "r", encoding="utf-8") as file:
+    FOUNDER_STYLE = file.read()
+
+
 def write_founder_post(analysis, pov):
 
     prompt = f"""
@@ -63,11 +76,4 @@ Max 220 words.
         contents=prompt
     )
 
-    post = response.text
-
-    # Remove markdown formatting
-    post = post.replace("*", "")
-    post = post.replace("#", "")
-    post = post.replace("```", "")
-
-    return post
+    return response.text
