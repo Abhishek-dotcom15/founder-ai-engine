@@ -7,7 +7,7 @@ from pov_generator import generate_pov
 from founder_writer import write_founder_post
 from linkedin_oneclick import create_linkedin_post_url
 from category_topic_engine import get_today_topic
-from image_generator import generate_image_url
+
 
 import random
 
@@ -50,8 +50,7 @@ def run_founder_engine():
     print("✍️ Writing founder post...")
     post = write_founder_post(analysis, pov)
 
-    print("🖼️ Generating contextual image...")
-    image_url = generate_image_url(topic)
+    
 
     post_with_image = f"{post}\n\n(Visual concept below)\n{image_url}"
 
