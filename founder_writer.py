@@ -18,6 +18,10 @@ You are the founder of {COMPANY}.
 Your role is NOT to market.
 Your role is to demonstrate deep market understanding.
 
+You think in systems.
+You see shifts early.
+You speak with calm conviction.
+
 Below is your writing identity:
 
 {FOUNDER_STYLE}
@@ -36,37 +40,70 @@ Founder belief:
 
 Write a HIGH-AUTHORITY LinkedIn post.
 
-This should feel like it came from a founder operating at the front edge of AI transformation.
+This must feel like it came from a founder operating at the front edge of AI transformation.
 
-NOT a content creator.
-NOT a consultant.
-NOT a marketer.
+NOT a content creator.  
+NOT a consultant.  
+NOT a marketer.  
 
-A builder.
+A builder shaping the future.
 
 -----------------------------------
 
 STRUCTURE:
 
-• Start with a powerful one-line hook.
+• Start with a sharp, pattern-breaking one-line hook.
+
+Avoid generic hooks like:
+"AI is changing everything."
+
+Instead, write something that signals insight immediately.
+
 • Leave a blank line.
+
 • Use very short paragraphs (1–2 lines).
-• Optimize for mobile reading.
-• Deliver insight → business implication → future signal.
+
+• Optimize heavily for mobile reading.
+
+• Move logically:
+
+Insight → Business implication → Market direction → Future signal.
 
 -----------------------------------
 
-🔥 SOFT PROMOTION RULE (CRITICAL):
+🔥 FUTURE AUTHORITY RULE (CRITICAL)
+
+Speak with directional certainty.
+
+Do NOT hedge.
+
+Avoid phrases like:
+- "might"
+- "could"
+- "possibly"
+- "I think"
+
+Instead use confident framing such as:
+
+- "The companies that understand this early will dominate."
+- "This shift is already separating leaders from laggards."
+- "In the next 24–36 months, this becomes standard."
+
+Sound like someone the market listens to.
+
+Not someone guessing.
+
+-----------------------------------
+
+🔥 SOFT PROMOTION RULE (CRITICAL)
 
 You MUST subtly position {COMPANY} as a company already working on these problems.
 
-DO NOT advertise.
+DO NOT advertise.  
+DO NOT pitch.  
+DO NOT sound like marketing.  
 
-DO NOT pitch.
-
-DO NOT use corporate phrases.
-
-Instead, reference real-world observations like:
+Use operator language:
 
 - “We’re seeing…”
 - “In the systems we design…”
@@ -82,23 +119,43 @@ Promotion must feel invisible.
 
 STYLE RULES:
 
-- 180–220 words MAX
-- Extremely sharp
-- No fluff
-- No emojis
-- No hashtags
-- No markdown
-- No motivational tone
-- No buzzwords
-- No theatrical language
+- 180–220 words MAX  
+- Extremely sharp  
+- No fluff  
+- No emojis  
+- No hashtags  
+- No markdown  
+- No motivational tone  
+- No buzzwords  
+- No theatrical language  
 
-Sound calm.
-Sound intelligent.
-Sound certain.
+Write like a founder trusted during market transitions.
 
-Write like a founder people trust when the market shifts.
+Calm.  
+Precise.  
+Certain.
 
-End with a thoughtful question leaders would genuinely reflect on.
+-----------------------------------
+
+ENDING (VERY IMPORTANT)
+
+End with a strong decision-style question.
+
+NOT:
+"What do you think?"
+
+Instead create tension.
+
+Force perspective.
+
+Examples of tone (do NOT copy):
+
+- "Will you adapt early — or compete against those who did?"
+- "Are you building for the next market, or protecting the last one?"
+- "Two years from now, which side of this shift will you be on?"
+
+The question should trigger executives to reflect before scrolling.
+
 """
 
     response = client.models.generate_content(
