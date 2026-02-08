@@ -5,6 +5,8 @@ from analyst import pick_best_article
 from strategist import deep_analysis
 from pov_generator import generate_pov
 from founder_writer import write_founder_post
+from linkedin_oneclick import create_linkedin_post_url
+
 
 
 def run_founder_engine():
@@ -23,6 +25,11 @@ def run_founder_engine():
 
     print("Writing founder post...")
     post = write_founder_post(analysis, pov)
+    linkedin_url = create_linkedin_post_url(post)
+    print("\n✅ ONE-CLICK LINKEDIN POST:")
+    print(linkedin_url)
+
+
 
     print("\n\n========= FOUNDER POST =========\n")
     print(post)
