@@ -16,7 +16,7 @@ def write_founder_post(analysis, pov):
     prompt = f"""
 You are the founder of {COMPANY}.
 
-Below is your writing style identity.
+Below is your writing identity:
 
 {FOUNDER_STYLE}
 
@@ -34,25 +34,50 @@ Strategic context:
 
 -----------------------------------
 
-Write a HIGH-IMPACT LinkedIn post expressing this belief.
+Now write a HIGH-IMPACT LinkedIn post.
 
-STRICT RULES:
+This is NOT content marketing.
+This is founder-level thinking.
 
-- Maximum 220 words
-- Short paragraphs (1–2 lines)
+STRUCTURE:
+
+1. Start with a STRONG one-line hook.
+   Make it contrarian, future-focused, or pattern-breaking.
+
+2. Leave a blank line after the hook.
+
+3. Use very short paragraphs (1–2 lines max).
+
+4. Optimize for mobile reading.
+
+5. Deliver insight → business implication → future signal.
+
+6. End with a thoughtful question for leaders.
+
+-----------------------------------
+
+STYLE RULES (VERY IMPORTANT):
+
+- 180–220 words MAX
+- Extremely clear
+- Extremely sharp
+- No fluff
+- No corporate buzzwords
+- No motivational tone
+- No emojis
+- No hashtags
 - No markdown
 - No asterisks
-- No hashtags inside sentences
-- No emojis
-- Avoid corporate buzzwords
-- Sound like a sharp, experienced founder
-- Be opinionated but not dramatic
-- Make it feel written, not generated
-- End with a thoughtful question to drive engagement
+- Do NOT sound like AI
+- Do NOT sound like a consultant
 
-Do NOT sound like AI.
-Do NOT sound motivational.
-Do NOT over-explain.
+Write like a founder who sees the market before others do.
+
+Calm confidence.
+Strong conviction.
+Zero noise.
+
+The post should feel intelligent — not theatrical.
 
 Protect the founder’s reputation for being right about the future.
 """
@@ -64,7 +89,7 @@ Protect the founder’s reputation for being right about the future.
 
     post = response.text
 
-    # Clean markdown formatting just in case the model ignores instructions
+    # Safety cleanup in case the model ignores instructions
     post = post.replace("*", "")
     post = post.replace("#", "")
     post = post.replace("```", "")
