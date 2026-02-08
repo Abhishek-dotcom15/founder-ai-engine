@@ -6,7 +6,6 @@ load_dotenv()
 
 COMPANY = os.getenv("COMPANY_NAME")
 
-# Load founder style memory
 with open("founder_style.txt", "r", encoding="utf-8") as file:
     FOUNDER_STYLE = file.read()
 
@@ -16,15 +15,12 @@ def write_founder_post(analysis, pov):
     prompt = f"""
 You are the founder of {COMPANY}.
 
+Your role is NOT to market.
+Your role is to demonstrate deep market understanding.
+
 Below is your writing identity:
 
 {FOUNDER_STYLE}
-
------------------------------------
-
-Your private executive belief:
-
-{pov}
 
 -----------------------------------
 
@@ -32,54 +28,77 @@ Strategic context:
 
 {analysis}
 
+Founder belief:
+
+{pov}
+
 -----------------------------------
 
-Now write a HIGH-IMPACT LinkedIn post.
+Write a HIGH-AUTHORITY LinkedIn post.
 
-This is NOT content marketing.
-This is founder-level thinking.
+This should feel like it came from a founder operating at the front edge of AI transformation.
+
+NOT a content creator.
+NOT a consultant.
+NOT a marketer.
+
+A builder.
+
+-----------------------------------
 
 STRUCTURE:
 
-1. Start with a STRONG one-line hook.
-   Make it contrarian, future-focused, or pattern-breaking.
-
-2. Leave a blank line after the hook.
-
-3. Use very short paragraphs (1–2 lines max).
-
-4. Optimize for mobile reading.
-
-5. Deliver insight → business implication → future signal.
-
-6. End with a thoughtful question for leaders.
+• Start with a powerful one-line hook.
+• Leave a blank line.
+• Use very short paragraphs (1–2 lines).
+• Optimize for mobile reading.
+• Deliver insight → business implication → future signal.
 
 -----------------------------------
 
-STYLE RULES (VERY IMPORTANT):
+🔥 SOFT PROMOTION RULE (CRITICAL):
+
+You MUST subtly position {COMPANY} as a company already working on these problems.
+
+DO NOT advertise.
+
+DO NOT pitch.
+
+DO NOT use corporate phrases.
+
+Instead, reference real-world observations like:
+
+- “We’re seeing…”
+- “In the systems we design…”
+- “Companies working with us often discover…”
+- “Inside high-performing teams…”
+- “When automation is implemented correctly…”
+
+The reader should naturally conclude that {COMPANY} understands the future and builds toward it.
+
+Promotion must feel invisible.
+
+-----------------------------------
+
+STYLE RULES:
 
 - 180–220 words MAX
-- Extremely clear
 - Extremely sharp
 - No fluff
-- No corporate buzzwords
-- No motivational tone
 - No emojis
 - No hashtags
 - No markdown
-- No asterisks
-- Do NOT sound like AI
-- Do NOT sound like a consultant
+- No motivational tone
+- No buzzwords
+- No theatrical language
 
-Write like a founder who sees the market before others do.
+Sound calm.
+Sound intelligent.
+Sound certain.
 
-Calm confidence.
-Strong conviction.
-Zero noise.
+Write like a founder people trust when the market shifts.
 
-The post should feel intelligent — not theatrical.
-
-Protect the founder’s reputation for being right about the future.
+End with a thoughtful question leaders would genuinely reflect on.
 """
 
     response = client.models.generate_content(
@@ -89,7 +108,7 @@ Protect the founder’s reputation for being right about the future.
 
     post = response.text
 
-    # Safety cleanup in case the model ignores instructions
+    # Safety cleanup
     post = post.replace("*", "")
     post = post.replace("#", "")
     post = post.replace("```", "")
